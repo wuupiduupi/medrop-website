@@ -3,23 +3,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>me°drop – Drop moments, not messages.</title>
-  <meta name="description" content="me°drop verbindet Orte, Menschen und Erinnerungen. Teile besondere Orte, plane kleine Überraschungen und erschaffe gemeinsame Momente." />
+  <meta name="description" content="me°drop verbindet Orte, Freunde und Erinnerungen. Teile Orte, plane Überraschungen und erschaffe gemeinsame Momente." />
 
   <style>
     :root {
-      --bg: #050816;
-      --bg-soft: #0b1024;
-      --card: rgba(255, 255, 255, 0.08);
-      --card-border: rgba(255, 255, 255, 0.14);
-      --text: #f8fafc;
-      --muted: #aab4c8;
-      --accent: #7dd3fc;
-      --accent-2: #c084fc;
-      --green: #86efac;
-      --orange: #fdba74;
-      --shadow: 0 30px 80px rgba(0, 0, 0, 0.45);
-      --radius: 28px;
+      --bg: #f7f4ef;
+      --text: #151515;
+      --muted: #777777;
+      --card: rgba(255, 255, 255, 0.78);
+      --border: rgba(0, 0, 0, 0.08);
+      --orange: #f59a2f;
+      --blue: #2478ff;
+      --green: #35c85a;
+      --red: #ff4b4b;
+      --shadow: 0 24px 70px rgba(0, 0, 0, 0.12);
+      --radius: 34px;
     }
 
     * {
@@ -34,11 +34,10 @@
       margin: 0;
       font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", sans-serif;
       background:
-        radial-gradient(circle at top left, rgba(125, 211, 252, 0.22), transparent 32rem),
-        radial-gradient(circle at top right, rgba(192, 132, 252, 0.18), transparent 34rem),
-        linear-gradient(180deg, #050816 0%, #070b1a 52%, #020617 100%);
+        radial-gradient(circle at top left, rgba(135, 206, 222, 0.35), transparent 34rem),
+        radial-gradient(circle at top right, rgba(245, 154, 47, 0.18), transparent 32rem),
+        linear-gradient(180deg, #f8f4ed 0%, #eef6f7 55%, #f7f4ef 100%);
       color: var(--text);
-      line-height: 1.5;
     }
 
     a {
@@ -46,33 +45,32 @@
       text-decoration: none;
     }
 
-    .page {
-      overflow: hidden;
-    }
-
     header {
       position: fixed;
-      top: 0;
+      top: 18px;
       left: 0;
       right: 0;
       z-index: 20;
-      backdrop-filter: blur(24px);
-      background: rgba(5, 8, 22, 0.68);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 0 18px;
     }
 
     .nav {
-      max-width: 1180px;
+      max-width: 1120px;
       margin: 0 auto;
-      padding: 18px 24px;
+      padding: 16px 22px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.72);
+      backdrop-filter: blur(24px);
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      box-shadow: 0 16px 45px rgba(0, 0, 0, 0.08);
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      justify-content: space-between;
     }
 
     .logo {
-      font-size: 1.45rem;
       font-weight: 800;
+      font-size: 1.35rem;
       letter-spacing: -0.04em;
     }
 
@@ -84,197 +82,114 @@
     }
 
     .nav-links a:hover {
-      color: var(--text);
+      color: var(--orange);
     }
 
     section {
-      max-width: 1180px;
+      max-width: 1120px;
       margin: 0 auto;
-      padding: 110px 24px;
+      padding: 105px 24px;
     }
 
     .hero {
       min-height: 100vh;
       display: grid;
-      grid-template-columns: 1.05fr 0.95fr;
-      align-items: center;
+      grid-template-columns: 1fr 0.95fr;
       gap: 56px;
+      align-items: center;
       padding-top: 150px;
     }
 
     .eyebrow {
       display: inline-flex;
-      padding: 8px 14px;
-      border: 1px solid var(--card-border);
+      padding: 9px 15px;
       border-radius: 999px;
-      background: rgba(255, 255, 255, 0.06);
-      color: var(--accent);
-      font-size: 0.9rem;
+      background: rgba(255,255,255,0.72);
+      border: 1px solid var(--border);
+      color: var(--orange);
+      font-weight: 700;
       margin-bottom: 22px;
     }
 
     h1 {
       margin: 0;
-      font-size: clamp(4rem, 10vw, 8.5rem);
-      line-height: 0.88;
-      letter-spacing: -0.08em;
+      font-size: clamp(4.5rem, 10vw, 8rem);
+      line-height: 0.9;
+      letter-spacing: -0.085em;
     }
 
     .headline {
-      margin-top: 28px;
-      font-size: clamp(2rem, 4vw, 4.1rem);
-      line-height: 1.03;
-      letter-spacing: -0.06em;
-      max-width: 760px;
+      margin-top: 22px;
+      font-size: clamp(2.1rem, 4.6vw, 4.6rem);
+      line-height: 1;
+      letter-spacing: -0.065em;
+      font-weight: 800;
+      max-width: 780px;
     }
 
     .lead {
-      margin-top: 26px;
       max-width: 620px;
+      margin-top: 26px;
       color: var(--muted);
-      font-size: 1.25rem;
+      font-size: 1.22rem;
+      line-height: 1.55;
     }
 
-    .hero-actions {
+    .actions {
       display: flex;
-      flex-wrap: wrap;
       gap: 14px;
-      margin-top: 36px;
+      flex-wrap: wrap;
+      margin-top: 34px;
     }
 
     .button {
-      padding: 15px 22px;
       border-radius: 999px;
-      font-weight: 700;
-      border: 1px solid rgba(255, 255, 255, 0.14);
-      background: rgba(255, 255, 255, 0.1);
+      padding: 15px 22px;
+      font-weight: 800;
+      background: rgba(255,255,255,0.78);
+      border: 1px solid var(--border);
+      box-shadow: 0 12px 35px rgba(0,0,0,0.08);
     }
 
     .button.primary {
-      background: linear-gradient(135deg, var(--accent), var(--accent-2));
-      color: #020617;
+      background: var(--blue);
+      color: white;
       border: none;
     }
 
-    .phone-wrap {
+    .phone-stage {
       display: flex;
       justify-content: center;
       position: relative;
     }
 
-    .phone-glow {
-      position: absolute;
-      width: 420px;
-      height: 420px;
-      border-radius: 999px;
-      background: radial-gradient(circle, rgba(125, 211, 252, 0.25), transparent 68%);
-      filter: blur(12px);
-    }
-
-    .phone {
-      position: relative;
+    .phone-card {
       width: min(340px, 82vw);
-      aspect-ratio: 9 / 19.5;
-      border-radius: 46px;
-      padding: 14px;
-      background: linear-gradient(145deg, #1f2937, #020617);
+      border-radius: 48px;
+      padding: 12px;
+      background: #111;
       box-shadow: var(--shadow);
-      border: 1px solid rgba(255, 255, 255, 0.22);
+      transform: rotate(2deg);
     }
 
-    .screen {
-      height: 100%;
-      border-radius: 34px;
-      overflow: hidden;
-      background:
-        radial-gradient(circle at 30% 20%, rgba(125, 211, 252, 0.28), transparent 11rem),
-        radial-gradient(circle at 70% 72%, rgba(192, 132, 252, 0.22), transparent 13rem),
-        #07111f;
-      padding: 22px;
-      position: relative;
-    }
-
-    .screen-top {
-      display: flex;
-      justify-content: space-between;
-      font-size: 0.85rem;
-      color: rgba(255, 255, 255, 0.72);
-    }
-
-    .map-card {
-      position: absolute;
-      left: 22px;
-      right: 22px;
-      top: 78px;
-      bottom: 120px;
-      border-radius: 28px;
-      background:
-        linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px),
-        linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
-        rgba(255,255,255,0.06);
-      background-size: 34px 34px;
-      border: 1px solid rgba(255,255,255,0.1);
-    }
-
-    .pin {
-      position: absolute;
-      width: 42px;
-      height: 42px;
-      border-radius: 50% 50% 50% 10%;
-      transform: rotate(-45deg);
-      background: linear-gradient(135deg, var(--accent), var(--accent-2));
-      box-shadow: 0 12px 30px rgba(125, 211, 252, 0.35);
-    }
-
-    .pin::after {
-      content: "";
-      position: absolute;
-      width: 16px;
-      height: 16px;
-      border-radius: 999px;
-      background: white;
-      top: 13px;
-      left: 13px;
-    }
-
-    .pin.one { left: 52px; top: 92px; }
-    .pin.two { right: 52px; top: 190px; transform: rotate(-45deg) scale(0.78); opacity: 0.82; }
-    .pin.three { left: 112px; bottom: 74px; transform: rotate(-45deg) scale(0.64); opacity: 0.7; }
-
-    .drop-card {
-      position: absolute;
-      left: 22px;
-      right: 22px;
-      bottom: 24px;
-      border-radius: 24px;
-      background: rgba(255,255,255,0.12);
-      backdrop-filter: blur(18px);
-      border: 1px solid rgba(255,255,255,0.12);
-      padding: 18px;
-    }
-
-    .drop-card strong {
+    .phone-card img {
       display: block;
-      font-size: 1.05rem;
-      margin-bottom: 5px;
-    }
-
-    .drop-card span {
-      color: var(--muted);
-      font-size: 0.92rem;
+      width: 100%;
+      border-radius: 38px;
     }
 
     .section-title {
-      font-size: clamp(2.3rem, 5vw, 5rem);
+      font-size: clamp(2.5rem, 5vw, 5.2rem);
       line-height: 0.95;
-      letter-spacing: -0.07em;
+      letter-spacing: -0.075em;
       margin: 0 0 22px;
     }
 
     .section-text {
       max-width: 760px;
       color: var(--muted);
-      font-size: 1.2rem;
+      font-size: 1.18rem;
+      line-height: 1.55;
       margin: 0 0 42px;
     }
 
@@ -285,34 +200,41 @@
     }
 
     .card {
-      background: var(--card);
-      border: 1px solid var(--card-border);
       border-radius: var(--radius);
-      padding: 28px;
+      background: var(--card);
+      backdrop-filter: blur(24px);
+      border: 1px solid var(--border);
+      padding: 30px;
       min-height: 250px;
-      box-shadow: 0 18px 60px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 18px 55px rgba(0,0,0,0.08);
     }
 
     .icon {
-      width: 48px;
-      height: 48px;
-      border-radius: 16px;
+      width: 54px;
+      height: 54px;
+      border-radius: 18px;
       display: grid;
       place-items: center;
-      margin-bottom: 28px;
-      background: rgba(255, 255, 255, 0.1);
-      font-size: 1.4rem;
-    }
-
-    .card h3 {
-      margin: 0 0 12px;
       font-size: 1.45rem;
-      letter-spacing: -0.04em;
+      background: rgba(245,154,47,0.16);
+      margin-bottom: 28px;
     }
 
-    .card p {
-      margin: 0;
+    .card h3,
+    .step h3,
+    .shot h3,
+    .legal-card h2 {
+      margin: 0 0 12px;
+      letter-spacing: -0.045em;
+    }
+
+    .card p,
+    .step p,
+    .shot p,
+    .legal-card p {
       color: var(--muted);
+      line-height: 1.55;
+      margin: 0;
     }
 
     .steps {
@@ -325,62 +247,51 @@
     .step {
       counter-increment: steps;
       border-radius: var(--radius);
-      padding: 26px;
-      background: linear-gradient(180deg, rgba(255,255,255,0.1), rgba(255,255,255,0.045));
-      border: 1px solid var(--card-border);
+      padding: 28px;
+      background: rgba(255,255,255,0.78);
+      border: 1px solid var(--border);
+      box-shadow: 0 18px 55px rgba(0,0,0,0.08);
     }
 
     .step::before {
       content: "0" counter(steps);
       display: block;
-      color: var(--accent);
-      font-weight: 800;
-      margin-bottom: 34px;
+      font-weight: 900;
+      color: var(--orange);
+      margin-bottom: 36px;
     }
 
-    .step h3 {
-      margin: 0 0 10px;
-      letter-spacing: -0.04em;
-    }
-
-    .step p {
-      margin: 0;
-      color: var(--muted);
-      font-size: 0.95rem;
-    }
-
-    .screenshots-grid {
+    .screenshots {
       display: grid;
-      grid-template-columns: 1.2fr 0.8fr 0.8fr;
-      gap: 18px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+      align-items: start;
     }
 
     .shot {
-      min-height: 360px;
-      border-radius: 34px;
-      background:
-        radial-gradient(circle at 30% 20%, rgba(125,211,252,0.2), transparent 12rem),
-        linear-gradient(145deg, rgba(255,255,255,0.12), rgba(255,255,255,0.045));
-      border: 1px solid var(--card-border);
-      padding: 26px;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
+      border-radius: 42px;
+      background: rgba(255,255,255,0.78);
+      border: 1px solid var(--border);
+      padding: 14px;
+      box-shadow: var(--shadow);
     }
 
-    .shot.large {
-      min-height: 520px;
+    .shot:nth-child(2) {
+      margin-top: 58px;
     }
 
-    .shot h3 {
-      margin: 0 0 10px;
-      font-size: 1.55rem;
-      letter-spacing: -0.04em;
+    .shot:nth-child(3) {
+      margin-top: 116px;
     }
 
-    .shot p {
-      margin: 0;
-      color: var(--muted);
+    .shot img {
+      width: 100%;
+      display: block;
+      border-radius: 32px;
+    }
+
+    .shot-copy {
+      padding: 22px 12px 8px;
     }
 
     .legal {
@@ -392,29 +303,20 @@
     .legal-card {
       border-radius: var(--radius);
       padding: 32px;
-      background: rgba(255,255,255,0.07);
-      border: 1px solid var(--card-border);
-    }
-
-    .legal-card h2 {
-      margin: 0 0 14px;
-      letter-spacing: -0.04em;
-    }
-
-    .legal-card p {
-      color: var(--muted);
-      margin: 0 0 18px;
+      background: rgba(255,255,255,0.78);
+      border: 1px solid var(--border);
+      box-shadow: 0 18px 55px rgba(0,0,0,0.08);
     }
 
     footer {
-      max-width: 1180px;
+      max-width: 1120px;
       margin: 0 auto;
-      padding: 40px 24px 70px;
+      padding: 44px 24px 70px;
       color: var(--muted);
       display: flex;
       justify-content: space-between;
       gap: 20px;
-      border-top: 1px solid rgba(255,255,255,0.08);
+      border-top: 1px solid rgba(0,0,0,0.08);
     }
 
     @media (max-width: 900px) {
@@ -424,24 +326,23 @@
 
       .hero {
         grid-template-columns: 1fr;
-        text-align: left;
-        padding-top: 130px;
+        padding-top: 135px;
       }
 
-      .phone-wrap {
+      .phone-stage {
         justify-content: flex-start;
       }
 
       .cards,
       .steps,
-      .screenshots-grid,
+      .screenshots,
       .legal {
         grid-template-columns: 1fr;
       }
 
-      .shot,
-      .shot.large {
-        min-height: 320px;
+      .shot:nth-child(2),
+      .shot:nth-child(3) {
+        margin-top: 0;
       }
 
       footer {
@@ -452,180 +353,159 @@
 </head>
 
 <body>
-  <div class="page">
-    <header>
-      <nav class="nav">
-        <a href="#" class="logo">me°drop</a>
-        <div class="nav-links">
-          <a href="#entdecken">Entdecken</a>
-          <a href="#funktion">So funktioniert’s</a>
-          <a href="#screenshots">Screenshots</a>
-          <a href="#datenschutz">Datenschutz</a>
-          <a href="#impressum">Impressum</a>
-        </div>
-      </nav>
-    </header>
+  <header>
+    <nav class="nav">
+      <a class="logo" href="#">me°drop</a>
+      <div class="nav-links">
+        <a href="#entdecken">Entdecken</a>
+        <a href="#funktion">So funktioniert’s</a>
+        <a href="#screenshots">Screenshots</a>
+        <a href="#datenschutz">Datenschutz</a>
+        <a href="#impressum">Impressum</a>
+      </div>
+    </nav>
+  </header>
 
-    <main>
-      <section class="hero">
-        <div>
-          <div class="eyebrow">Orte. Freunde. Erinnerungen.</div>
-          <h1>me°drop</h1>
-          <div class="headline">Drop moments, not messages.</div>
-          <p class="lead">
-            me°drop verbindet Orte mit Menschen. Teile besondere Plätze,
-            plane kleine Überraschungen und erschaffe Erinnerungen, die nicht
-            einfach im Chat verschwinden.
-          </p>
-          <div class="hero-actions">
-            <a href="#entdecken" class="button primary">Entdecken</a>
-            <a href="#funktion" class="button">So funktioniert’s</a>
-          </div>
-        </div>
-
-        <div class="phone-wrap">
-          <div class="phone-glow"></div>
-          <div class="phone">
-            <div class="screen">
-              <div class="screen-top">
-                <span>me°drop</span>
-                <span>12:48</span>
-              </div>
-
-              <div class="map-card">
-                <div class="pin one"></div>
-                <div class="pin two"></div>
-                <div class="pin three"></div>
-              </div>
-
-              <div class="drop-card">
-                <strong>Ein Drop wartet auf dich</strong>
-                <span>Öffne ihn, wenn du am richtigen Ort bist.</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="entdecken">
-        <h2 class="section-title">Entdecken statt nur schreiben.</h2>
-        <p class="section-text">
-          Mit me°drop werden Orte zu kleinen Geschichten. Du entscheidest,
-          wer etwas sehen darf, wann es sichtbar wird und wo daraus ein Moment entsteht.
+  <main>
+    <section class="hero">
+      <div>
+        <div class="eyebrow">Orte. Freunde. Erinnerungen.</div>
+        <h1>me°drop</h1>
+        <div class="headline">Drop moments, not messages.</div>
+        <p class="lead">
+          me°drop verbindet Orte mit Menschen. Teile besondere Plätze,
+          plane kleine Überraschungen und erschaffe Erinnerungen, die nicht einfach
+          in einem Chat verschwinden.
         </p>
-
-        <div class="cards">
-          <article class="card">
-            <div class="icon">📍</div>
-            <h3>Orte teilen</h3>
-            <p>
-              Markiere besondere Plätze und teile sie gezielt mit Menschen,
-              für die dieser Ort eine Bedeutung haben soll.
-            </p>
-          </article>
-
-          <article class="card">
-            <div class="icon">✨</div>
-            <h3>Überraschungen planen</h3>
-            <p>
-              Erstelle Drops, die erst am richtigen Ort oder zum passenden Zeitpunkt
-              ihren Sinn entfalten.
-            </p>
-          </article>
-
-          <article class="card">
-            <div class="icon">🫶</div>
-            <h3>Erinnerungen erschaffen</h3>
-            <p>
-              Aus einer Nachricht wird ein Erlebnis. Aus einem Ort wird eine Geschichte,
-              die man gemeinsam behält.
-            </p>
-          </article>
+        <div class="actions">
+          <a class="button primary" href="#entdecken">Entdecken</a>
+          <a class="button" href="#funktion">So funktioniert’s</a>
         </div>
-      </section>
+      </div>
 
-      <section id="funktion">
-        <h2 class="section-title">So funktioniert’s.</h2>
-        <p class="section-text">
-          me°drop bleibt bewusst einfach: Moment wählen, Menschen auswählen,
-          Drop platzieren und später gemeinsam entdecken.
-        </p>
-
-        <div class="steps">
-          <article class="step">
-            <h3>Drop erstellen</h3>
-            <p>Halte eine Nachricht, Idee oder Erinnerung fest und verbinde sie mit einem Ort.</p>
-          </article>
-
-          <article class="step">
-            <h3>Freunde auswählen</h3>
-            <p>Teile deinen Drop nur mit den Menschen, für die er bestimmt ist.</p>
-          </article>
-
-          <article class="step">
-            <h3>Zeitpunkt festlegen</h3>
-            <p>Bestimme, wann der Drop sichtbar wird und wann der Moment entstehen soll.</p>
-          </article>
-
-          <article class="step">
-            <h3>Check-in</h3>
-            <p>Am richtigen Ort wird aus dem Drop ein echtes Erlebnis.</p>
-          </article>
+      <div class="phone-stage">
+        <div class="phone-card">
+          <img src="assets/01_map_drop.jpeg" alt="me°drop Kartenansicht mit Drop" />
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section id="screenshots">
-        <h2 class="section-title">Ein Blick in me°drop.</h2>
-        <p class="section-text">
-          Die App ist auf Klarheit, Nähe und einfache Bedienung ausgelegt.
-          Deine Orte, deine Menschen, deine Momente.
-        </p>
+    <section id="entdecken">
+      <h2 class="section-title">Entdecken statt nur schreiben.</h2>
+      <p class="section-text">
+        Mit me°drop werden Orte zu kleinen Geschichten. Du entscheidest,
+        wer etwas sehen darf, wann es sichtbar wird und wo daraus ein Moment entsteht.
+      </p>
 
-        <div class="screenshots-grid">
-          <article class="shot large">
+      <div class="cards">
+        <article class="card">
+          <div class="icon">📍</div>
+          <h3>Orte teilen</h3>
+          <p>Markiere besondere Plätze und teile sie gezielt mit Menschen, für die dieser Ort eine Bedeutung haben soll.</p>
+        </article>
+
+        <article class="card">
+          <div class="icon">✨</div>
+          <h3>Überraschungen planen</h3>
+          <p>Erstelle Drops, die erst am richtigen Ort oder zum passenden Zeitpunkt ihren Sinn entfalten.</p>
+        </article>
+
+        <article class="card">
+          <div class="icon">🫶</div>
+          <h3>Erinnerungen erschaffen</h3>
+          <p>Aus einer Nachricht wird ein Erlebnis. Aus einem Ort wird eine Geschichte, die man gemeinsam behält.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="funktion">
+      <h2 class="section-title">So funktioniert’s.</h2>
+      <p class="section-text">
+        me°drop bleibt bewusst einfach: Moment wählen, Menschen auswählen,
+        Drop platzieren und später gemeinsam entdecken.
+      </p>
+
+      <div class="steps">
+        <article class="step">
+          <h3>Drop erstellen</h3>
+          <p>Halte eine Nachricht, Idee oder Erinnerung fest und verbinde sie mit einem Ort.</p>
+        </article>
+
+        <article class="step">
+          <h3>Freunde auswählen</h3>
+          <p>Teile deinen Drop nur mit den Menschen, für die er bestimmt ist.</p>
+        </article>
+
+        <article class="step">
+          <h3>Zeitpunkt festlegen</h3>
+          <p>Bestimme, wann der Drop sichtbar wird und wann der Moment entstehen soll.</p>
+        </article>
+
+        <article class="step">
+          <h3>Check-in</h3>
+          <p>Am richtigen Ort wird aus dem Drop ein echtes Erlebnis.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="screenshots">
+      <h2 class="section-title">Ein Blick in me°drop.</h2>
+      <p class="section-text">
+        Die App nutzt vertraute iOS-Muster, weiche Cards und eine klare Kartenansicht.
+        Alles bleibt nah am Ort, am Moment und an den Menschen.
+      </p>
+
+      <div class="screenshots">
+        <article class="shot">
+          <img src="assets/01_map_drop.jpeg" alt="Kartenansicht mit aktivem Drop" />
+          <div class="shot-copy">
             <h3>Karte</h3>
-            <p>Sieh, wo Drops auf dich warten und welche Orte für deine Freunde wichtig sind.</p>
-          </article>
+            <p>Sieh, wo Drops auf dich warten und welche Orte eine Geschichte tragen.</p>
+          </div>
+        </article>
 
-          <article class="shot">
+        <article class="shot">
+          <img src="assets/02_circle_select.png" alt="Circle-Auswahl in me°drop" />
+          <div class="shot-copy">
             <h3>Circles</h3>
-            <p>Organisiere Freunde in Kreisen und teile Momente gezielt.</p>
-          </article>
+            <p>Wähle gezielt aus, mit wem du einen Moment teilen möchtest.</p>
+          </div>
+        </article>
 
-          <article class="shot">
-            <h3>Momente</h3>
-            <p>Öffne Drops, checke ein und sammle Erinnerungen an echten Orten.</p>
-          </article>
-        </div>
-      </section>
+        <article class="shot">
+          <img src="assets/03_create_drop.png" alt="Drop erstellen in me°drop" />
+          <div class="shot-copy">
+            <h3>Drop erstellen</h3>
+            <p>Nachricht, Zeitraum und Ort werden zu einem gemeinsamen Erlebnis.</p>
+          </div>
+        </article>
+      </div>
+    </section>
 
-      <section id="datenschutz">
-        <div class="legal">
-          <article class="legal-card">
-            <h2>Datenschutz</h2>
-            <p>
-              me°drop geht bewusst mit Standortdaten und persönlichen Informationen um.
-              Eine ausführliche Datenschutzerklärung wird hier bereitgestellt.
-            </p>
-            <a href="#" class="button">Datenschutz ansehen</a>
-          </article>
+    <section id="datenschutz">
+      <div class="legal">
+        <article class="legal-card">
+          <h2>Datenschutz</h2>
+          <p>
+            me°drop geht bewusst mit Standortdaten und persönlichen Informationen um.
+            Eine ausführliche Datenschutzerklärung wird hier bereitgestellt.
+          </p>
+        </article>
 
-          <article id="impressum" class="legal-card">
-            <h2>Impressum</h2>
-            <p>
-              Angaben zum Betreiber, Kontaktmöglichkeiten und rechtliche Informationen
-              werden hier veröffentlicht.
-            </p>
-            <a href="#" class="button">Impressum ansehen</a>
-          </article>
-        </div>
-      </section>
-    </main>
+        <article id="impressum" class="legal-card">
+          <h2>Impressum</h2>
+          <p>
+            Angaben zum Betreiber, Kontaktmöglichkeiten und rechtliche Informationen
+            werden hier veröffentlicht.
+          </p>
+        </article>
+      </div>
+    </section>
+  </main>
 
-    <footer>
-      <div>© 2026 me°drop</div>
-      <div>Drop moments, not messages.</div>
-    </footer>
-  </div>
+  <footer>
+    <div>© 2026 me°drop</div>
+    <div>Drop moments, not messages.</div>
+  </footer>
 </body>
 </html>
