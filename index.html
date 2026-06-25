@@ -260,8 +260,7 @@
     .card h3,
     .step h3,
     .shot h3,
-    .legal-card h2,
-    .contact-card h2 {
+    .legal-card h2 {
       margin: 0 0 12px;
       letter-spacing: -0.045em;
     }
@@ -269,8 +268,7 @@
     .card p,
     .step p,
     .shot p,
-    .legal-card p,
-    .contact-card p {
+    .legal-card p {
       color: var(--muted);
       line-height: 1.55;
       margin: 0;
@@ -366,36 +364,6 @@
       }
     }
 
-    .contact-card {
-      border-radius: 44px;
-      padding: clamp(32px, 6vw, 64px);
-      background:
-        radial-gradient(circle at top right, rgba(36,120,255,0.14), transparent 26rem),
-        rgba(255,255,255,0.8);
-      backdrop-filter: blur(24px);
-      -webkit-backdrop-filter: blur(24px);
-      border: 1px solid var(--border);
-      box-shadow: var(--shadow);
-      display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 28px;
-      align-items: center;
-    }
-
-    .contact-card h2 {
-      font-size: clamp(2.2rem, 4vw, 4.2rem);
-      line-height: 0.95;
-      margin-bottom: 18px;
-    }
-
-    .email {
-      display: inline-flex;
-      margin-top: 18px;
-      color: var(--orange);
-      font-size: 1.25rem;
-      font-weight: 900;
-    }
-
     .legal {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -481,8 +449,7 @@
       .cards,
       .steps,
       .screenshots,
-      .legal,
-      .contact-card {
+      .legal {
         grid-template-columns: 1fr;
       }
 
@@ -506,7 +473,6 @@
         <a href="#entdecken">Entdecken</a>
         <a href="#funktion">So funktioniert’s</a>
         <a href="#screenshots">Screenshots</a>
-        <a href="#kontakt">Kontakt</a>
         <a href="#datenschutz">Datenschutz</a>
         <a href="#impressum">Impressum</a>
       </div>
@@ -629,21 +595,6 @@
       </div>
     </section>
 
-    <section id="kontakt">
-      <div class="contact-card">
-        <div>
-          <h2>Lass uns ins Gespräch kommen.</h2>
-          <p>
-            Hast du Fragen, Ideen oder Feedback zu me°drop?
-            Wir freuen uns auf deine Nachricht.
-          </p>
-          <a class="email" href="mailto:hello@medrop.ch">hello@medrop.ch</a>
-        </div>
-
-        <a class="button primary" href="mailto:hello@medrop.ch">Kontakt aufnehmen</a>
-      </div>
-    </section>
-
     <section id="datenschutz">
       <div class="legal">
         <article class="legal-card full">
@@ -667,7 +618,7 @@
 
             <div class="legal-item">
               <strong>Kontakt</strong>
-              <span>hello@medrop.ch</span>
+              <span>Wird ergänzt</span>
             </div>
 
             <div class="legal-item">
