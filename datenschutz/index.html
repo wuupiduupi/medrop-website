@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
+  <title>Datenschutzerklärung – me°drop</title>
+
+  <meta
+    name="description"
+    content="Datenschutzerklärung für die App und Website me°drop."
+  />
+
+  <style>
+    :root {
+      --bg: #f7f4ef;
+      --text: #151515;
+      --muted: #707070;
+      --card: rgba(255, 255, 255, 0.82);
+      --border: rgba(0, 0, 0, 0.08);
+      --orange: #f59a2f;
+      --blue: #2478ff;
+      --shadow: 0 24px 70px rgba(0, 0, 0, 0.10);
+      --radius: 30px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "SF Pro Display",
+        "Segoe UI",
+        sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(
+          circle at top left,
+          rgba(135, 206, 222, 0.35),
+          transparent 34rem
+        ),
+        radial-gradient(
+          circle at top right,
+          rgba(245, 154, 47, 0.18),
+          transparent 32rem
+        ),
+        linear-gradient(
+          180deg,
+          #f8f4ed 0%,
+          #eef6f7 55%,
+          #f7f4ef 100%
+        );
+    }
+
+    a {
+      color: var(--blue);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    header {
+      position: fixed;
+      top: 18px;
+      left: 0;
+      right: 0;
+      z-index: 20;
+      padding: 0 18px;
+    }
+
+    .nav {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 14px 20px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.75);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      border: 1px solid var(--border);
+      box-shadow: 0 16px 45px rgba(0, 0, 0, 0.08);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .logo {
+      color: var(--text);
+      font-weight: 900;
+      font-size: 1.35rem;
+      letter-spacing: -0.05em;
+    }
+
+    .back-link {
+      color: var(--muted);
+      font-size: 0.95rem;
+      font-weight: 700;
+    }
+
+    .back-link:hover {
+      color: var(--orange);
+      text-decoration: none;
+    }
+
+    main {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 150px 24px 90px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      padding: 9px 15px;
+      margin-bottom: 22px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.72);
+      border: 1px solid var(--border);
+      color: var(--orange);
+      font-weight: 800;
+      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.06);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(3.4rem, 8vw, 6.7rem);
+      line-height: 0.92;
+      letter-spacing: -0.075em;
+    }
+
+    .intro {
+      max-width: 760px;
+      margin: 26px 0 42px;
+      color: var(--muted);
+      font-size: 1.16rem;
+      line-height: 1.6;
+    }
+
+    .content-card {
+      padding: clamp(24px, 5vw, 48px);
+      border-radius: var(--radius);
+      background: var(--card);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+    }
+
+    section {
+      scroll-margin-top: 120px;
+      padding: 26px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    section:first-child {
+      padding-top: 0;
+    }
+
+    section:last-child {
+      padding-bottom: 0;
+      border-bottom: 0;
+    }
+
+    h2 {
+      margin: 0 0 14px;
+      font-size: 1.65rem;
+      letter-spacing: -0.045em;
+    }
+
+    h3 {
+      margin: 26px 0 10px;
+      font-size: 1.1rem;
+      letter-spacing: -0.02em;
+    }
+
+    p,
+    li {
+      color: var(--muted);
+      font-size: 1rem;
+      line-height: 1.65;
+    }
+
+    p {
+      margin: 0 0 14px;
+    }
+
+    ul {
+      margin: 12px 0 0;
+      padding-left: 22px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    .notice {
+      margin-top: 20px;
+      padding: 18px 20px;
+      border-radius: 20px;
+      background: rgba(36, 120, 255, 0.08);
+      border: 1px solid rgba(36, 120, 255, 0.14);
+    }
+
+    .notice p {
+      margin: 0;
+    }
+
+    .contact-box {
+      margin-top: 18px;
+      padding: 20px;
+      border-radius: 22px;
+      background: rgba(255, 255, 255, 0.68);
+      border: 1px solid var(--border);
+    }
+
+    .contact-box strong {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    footer {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 0 24px 70px;
+      color: var(--muted);
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .footer-brand {
+      color: var(--text);
+      font-weight: 900;
+    }
+
+    @media (max-width: 700px) {
+      header {
+        top: 10px;
+        padding: 0 10px;
+      }
+
+      .nav {
+        padding: 13px 16px;
+      }
+
+      main {
+        padding-top: 120px;
+      }
+
+      footer {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav class="nav">
+      <a class="logo" href="/">me°drop</a>
+      <a class="back-link" href="/">← Zur Startseite</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="eyebrow">Stand: August 2026</div>
+
+    <h1>Datenschutz</h1>
+
+    <p class="intro">
+      Diese Datenschutzerklärung informiert darüber, wie im Zusammenhang
+      mit der App und Website me°drop Personendaten bearbeitet werden.
+      me°drop soll Orte und gemeinsame Momente verbinden, ohne permanentes
+      Standort- oder Hintergrundtracking.
+    </p>
+
+    <article class="content-card">
+      <section>
+        <h2>1. Verantwortlicher</h2>
+
+        <p>
+          Verantwortlich für die Datenbearbeitung im Zusammenhang mit
+          me°drop ist:
+        </p>
+
+        <div class="contact-box">
+          <strong>Pascal Wagner</strong>
+          <span>Schweiz</span><br />
+          <a href="mailto:hello@medrop.ch">hello@medrop.ch</a>
+        </div>
+      </section>
+
+      <section>
+        <h2>2. Geltungsbereich</h2>
+
+        <p>
+          Diese Datenschutzerklärung gilt für die mobile App me°drop,
+          die Website medrop.ch sowie die damit verbundenen Funktionen
+          und Dienste.
+        </p>
+
+        <p>
+          Je nach Aufenthaltsort können insbesondere das schweizerische
+          Datenschutzgesetz und, soweit anwendbar, die europäische
+          Datenschutz-Grundverordnung gelten.
+        </p>
+      </section>
+
+      <section>
+        <h2>3. Bearbeitete Daten</h2>
+
+        <p>
+          Abhängig von der Nutzung können insbesondere folgende
+          Datenkategorien bearbeitet werden:
+        </p>
+
+        <ul>
+          <li>Name und E-Mail-Adresse</li>
+          <li>interne Nutzer- und Konto-ID</li>
+          <li>Profilbild, Status, Biografie und freiwillige Profilangaben</li>
+          <li>Freundschaften, Circles und Blockierungen</li>
+          <li>Freundschaftsanfragen und Einladungen</li>
+          <li>von Nutzern erstellte Drops und deren Nachrichten</li>
+          <li>gewählte Standorte und Kartenkoordinaten von Drops</li>
+          <li>Check-ins und zugehörige Zeitpunkte</li>
+          <li>Meldungen über Nutzer oder Inhalte</li>
+          <li>Benachrichtigungs- und App-Einstellungen</li>
+          <li>Push-Token und technische Gerätekennungen</li>
+          <li>Kauf- und Abonnementstatus</li>
+          <li>Werbe-, Nutzungs- und Diagnosedaten</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>4. Standortdaten</h2>
+
+        <p>
+          me°drop verwendet den Standort nur, wenn eine entsprechende
+          Funktion aktiv genutzt wird, beispielsweise um die eigene
+          Position auf der Karte anzuzeigen oder beim Erstellen eines
+          Drops einen Standort vorzuschlagen.
+        </p>
+
+        <p>
+          Ein Drop kann auch für einen manuell ausgewählten Ort erstellt
+          werden. me°drop betreibt kein permanentes Live-Tracking und
+          verfolgt den Standort nicht fortlaufend im Hintergrund.
+        </p>
+
+        <p>
+          Die Standortfreigabe kann jederzeit über die Einstellungen
+          des Betriebssystems geändert oder entzogen werden.
+        </p>
+      </section>
+
+      <section>
+        <h2>5. Zwecke der Bearbeitung</h2>
+
+        <p>Die Daten werden insbesondere bearbeitet, um:</p>
+
+        <ul>
+          <li>Konten zu erstellen und Nutzer anzumelden</li>
+          <li>Profile, Freundschaften und Circles bereitzustellen</li>
+          <li>Drops zu erstellen, anzuzeigen und zu teilen</li>
+          <li>Karten-, Standort- und Check-in-Funktionen anzubieten</li>
+          <li>Push-Benachrichtigungen zu versenden</li>
+          <li>Missbrauch zu verhindern und Meldungen zu prüfen</li>
+          <li>blockierte Kontakte auszublenden</li>
+          <li>Abonnements und Premiumfunktionen zu verwalten</li>
+          <li>Werbung entsprechend der gewählten Einwilligung anzuzeigen</li>
+          <li>Fehler zu erkennen und die App technisch zu betreiben</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>6. Firebase und Google Cloud</h2>
+
+        <p>
+          me°drop verwendet Dienste von Google Firebase, insbesondere
+          Firebase Authentication, Cloud Firestore, Firebase Storage,
+          Cloud Functions und Firebase Cloud Messaging.
+        </p>
+
+        <p>
+          Diese Dienste werden für Anmeldung, Datenbank, Profilbilder,
+          serverseitige Funktionen und Push-Benachrichtigungen eingesetzt.
+          Dabei können technische Kennungen, Kontoangaben, App-Daten,
+          Geräteinformationen und Diagnosedaten verarbeitet werden.
+        </p>
+
+        <p>
+          Anbieter ist Google. Weitere Informationen finden sich in den
+          Datenschutz- und Sicherheitsinformationen von Firebase:
+          <a
+            href="https://firebase.google.com/support/privacy"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Firebase Privacy and Security
+          </a>.
+        </p>
+      </section>
+
+      <section>
+        <h2>7. Anmeldung mit Apple und Google</h2>
+
+        <p>
+          Je nach Plattform kann die Anmeldung über Apple oder Google
+          erfolgen. Dabei werden die für die Anmeldung erforderlichen
+          Informationen wie Nutzer-ID, Name und E-Mail-Adresse an me°drop
+          übermittelt.
+        </p>
+
+        <p>
+          Der Umfang der übermittelten Daten richtet sich nach den
+          Einstellungen und Angaben beim jeweiligen Anbieter.
+        </p>
+      </section>
+
+      <section>
+        <h2>8. Google Maps</h2>
+
+        <p>
+          Für Karten- und Standortfunktionen verwendet me°drop Google Maps.
+          Beim Anzeigen oder Verwenden der Karte können insbesondere
+          Standort-, Geräte-, Nutzungs- und Diagnosedaten durch Google
+          verarbeitet werden.
+        </p>
+
+        <p>
+          Die Karte kann abhängig von der Geräte- und App-Konfiguration
+          Daten an Google übertragen.
+        </p>
+      </section>
+
+      <section>
+        <h2>9. Werbung, AdMob und Einwilligung</h2>
+
+        <p>
+          Die kostenlose Version von me°drop kann Werbung über Google AdMob
+          anzeigen. Dabei können insbesondere Gerätekennungen, grobe
+          Standortinformationen, Interaktionen mit Anzeigen sowie
+          technische Nutzungs- und Diagnosedaten verarbeitet werden.
+        </p>
+
+        <p>
+          Für Nutzer in der Schweiz, im Europäischen Wirtschaftsraum und
+          im Vereinigten Königreich wird eine Einwilligungsabfrage über
+          die Google User Messaging Platform verwendet.
+        </p>
+
+        <p>
+          me°drop fordert Anzeigen derzeit als nicht personalisierte
+          Anzeigen an. Je nach Einwilligung können eingeschränkte Anzeigen
+          oder keine Anzeigen verfügbar sein.
+        </p>
+
+        <p>
+          Eine bereits getroffene Datenschutzentscheidung kann innerhalb
+          der App über die Datenschutz- beziehungsweise Werbeeinstellungen
+          erneut aufgerufen und geändert werden.
+        </p>
+      </section>
+
+      <section>
+        <h2>10. Käufe und Abonnements</h2>
+
+        <p>
+          Käufe und Abonnements werden über den jeweiligen App Store und
+          RevenueCat verwaltet. me°drop erhält dabei keine vollständigen
+          Zahlungs- oder Kreditkartendaten.
+        </p>
+
+        <p>
+          Bearbeitet werden können insbesondere Kaufstatus,
+          Produktkennung, Transaktionsinformationen und eine technische
+          Kundenkennung.
+        </p>
+      </section>
+
+      <section>
+        <h2>11. Push-Benachrichtigungen</h2>
+
+        <p>
+          Bei aktivierten Push-Benachrichtigungen wird ein technisches
+          Push-Token gespeichert. Dieses wird verwendet, um beispielsweise
+          über neue Drops oder Check-ins zu informieren.
+        </p>
+
+        <p>
+          Push-Benachrichtigungen können in der App oder den
+          Betriebssystemeinstellungen deaktiviert werden.
+        </p>
+      </section>
+
+      <section>
+        <h2>12. Meldungen, Blockierungen und Sicherheit</h2>
+
+        <p>
+          Nutzer können andere Nutzer oder Drops melden und Kontakte
+          blockieren. Dabei werden die zur Prüfung und technischen
+          Umsetzung notwendigen Angaben gespeichert.
+        </p>
+
+        <p>
+          Meldungen können insbesondere die meldende Nutzer-ID,
+          die gemeldete Nutzer- oder Drop-ID, den Grund, den Status
+          und den Erstellungszeitpunkt enthalten.
+        </p>
+      </section>
+
+      <section>
+        <h2>13. Speicherdauer und Löschung</h2>
+
+        <p>
+          Personendaten werden nur so lange gespeichert, wie dies für die
+          beschriebenen Zwecke erforderlich ist oder gesetzliche
+          Aufbewahrungspflichten bestehen.
+        </p>
+
+        <ul>
+          <li>
+            Kontodaten werden grundsätzlich bis zur Löschung des Kontos
+            gespeichert.
+          </li>
+          <li>
+            Abgelaufene Drops werden automatisiert oder im Rahmen der
+            vorgesehenen App-Funktionen gelöscht.
+          </li>
+          <li>
+            Ungültige Push-Token können automatisiert entfernt werden.
+          </li>
+          <li>
+            Meldungen können bis zum Abschluss der Prüfung und darüber
+            hinaus gespeichert werden, soweit dies zur Missbrauchsabwehr
+            erforderlich ist.
+          </li>
+        </ul>
+
+        <p>
+          Das Konto kann innerhalb der App gelöscht werden. Dabei werden
+          die direkt zugeordneten Konto-, Profil- und App-Daten nach
+          Massgabe der implementierten Löschfunktion entfernt.
+        </p>
+      </section>
+
+      <section>
+        <h2>14. Bekanntgabe an Dritte und Auslandbearbeitung</h2>
+
+        <p>
+          Personendaten werden nur an Dienstleister übermittelt, soweit
+          dies für Betrieb, Sicherheit, Anmeldung, Karten, Werbung,
+          Push-Benachrichtigungen oder Abonnements erforderlich ist.
+        </p>
+
+        <p>Hierzu gehören insbesondere:</p>
+
+        <ul>
+          <li>Google und Firebase</li>
+          <li>Google Maps und Google AdMob</li>
+          <li>Apple</li>
+          <li>RevenueCat</li>
+          <li>App-Store- und Plattformbetreiber</li>
+        </ul>
+
+        <p>
+          Diese Anbieter können Daten auch ausserhalb der Schweiz oder
+          des Europäischen Wirtschaftsraums bearbeiten. Dabei gelten
+          die Datenschutz- und Vertragsbestimmungen der jeweiligen
+          Anbieter sowie die anwendbaren gesetzlichen Schutzmechanismen.
+        </p>
+      </section>
+
+      <section>
+        <h2>15. Website und GitHub Pages</h2>
+
+        <p>
+          Die Website medrop.ch wird über GitHub Pages bereitgestellt.
+          Beim Aufruf der Website können durch den Hostinganbieter
+          technische Zugriffsdaten wie IP-Adresse, Zeitpunkt,
+          Browserinformationen und angeforderte Datei verarbeitet werden.
+        </p>
+
+        <p>
+          me°drop verwendet auf der Website derzeit keine eigene
+          Nutzeranalyse und kein eigenes Werbetracking.
+        </p>
+      </section>
+
+      <section>
+        <h2>16. Datensicherheit</h2>
+
+        <p>
+          Es werden angemessene technische und organisatorische
+          Sicherheitsmassnahmen eingesetzt, um Personendaten vor Verlust,
+          unbefugtem Zugriff, Manipulation und unberechtigter Offenlegung
+          zu schützen.
+        </p>
+
+        <p>
+          Dazu gehören insbesondere verschlüsselte Übertragung,
+          Authentifizierung, rollen- beziehungsweise nutzerbezogene
+          Zugriffsregeln und serverseitige Sicherheitsprüfungen.
+        </p>
+      </section>
+
+      <section>
+        <h2>17. Rechte betroffener Personen</h2>
+
+        <p>
+          Im Rahmen des anwendbaren Datenschutzrechts können betroffene
+          Personen insbesondere folgende Rechte haben:
+        </p>
+
+        <ul>
+          <li>Auskunft über bearbeitete Personendaten</li>
+          <li>Berichtigung unrichtiger Daten</li>
+          <li>Löschung von Daten</li>
+          <li>Einschränkung oder Widerspruch gegen bestimmte Bearbeitungen</li>
+          <li>Widerruf einer erteilten Einwilligung</li>
+          <li>Herausgabe beziehungsweise Übertragung bestimmter Daten</li>
+          <li>Beschwerde bei einer zuständigen Datenschutzbehörde</li>
+        </ul>
+
+        <p>
+          Zur Ausübung dieser Rechte kann die unten angegebene
+          Kontaktadresse verwendet werden.
+        </p>
+      </section>
+
+      <section>
+        <h2>18. Änderungen dieser Datenschutzerklärung</h2>
+
+        <p>
+          Diese Datenschutzerklärung kann angepasst werden, wenn sich die
+          App, eingesetzte Dienste oder rechtliche Anforderungen ändern.
+          Es gilt die jeweils auf dieser Seite veröffentlichte Fassung.
+        </p>
+      </section>
+
+      <section>
+        <h2>19. Kontakt</h2>
+
+        <p>
+          Fragen zum Datenschutz oder Begehren betreffend Personendaten
+          können an folgende Adresse gerichtet werden:
+        </p>
+
+        <div class="contact-box">
+          <strong>me°drop – Datenschutz</strong>
+          <a href="mailto:hello@medrop.ch">hello@medrop.ch</a>
+        </div>
+
+        <div class="notice">
+          <p>
+            Diese Datenschutzerklärung beschreibt den aktuellen
+            technischen Stand von me°drop. Vor der endgültigen
+            Veröffentlichung der App empfiehlt sich eine rechtliche
+            Prüfung anhand des tatsächlichen Produktivbetriebs.
+          </p>
+        </div>
+      </section>
+    </article>
+  </main>
+
+  <footer>
+    <div>
+      <div class="footer-brand">© 2026 me°drop</div>
+      <div>Made with ❤️ in Switzerland</div>
+    </div>
+
+    <div>
+      <a href="/">Zur Startseite</a>
+    </div>
+  </footer>
+</body>
+</html>
