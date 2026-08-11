@@ -5,7 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>me°drop – Drop moments, not messages.</title>
-  <meta name="description" content="me°drop verbindet Orte, Freunde und Erinnerungen. Teile Orte, plane Überraschungen und erschaffe gemeinsame Momente." />
+  <meta
+    name="description"
+    content="me°drop macht spontane Treffen einfach. Erstelle Drops, teile Treffpunkte mit Freunden oder Circles und verabrede dich unkompliziert."
+  />
 
   <style>
     :root {
@@ -32,10 +35,19 @@
 
     body {
       margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display",
+        "Segoe UI", sans-serif;
       background:
-        radial-gradient(circle at top left, rgba(135, 206, 222, 0.35), transparent 34rem),
-        radial-gradient(circle at top right, rgba(245, 154, 47, 0.18), transparent 32rem),
+        radial-gradient(
+          circle at top left,
+          rgba(135, 206, 222, 0.35),
+          transparent 34rem
+        ),
+        radial-gradient(
+          circle at top right,
+          rgba(245, 154, 47, 0.18),
+          transparent 32rem
+        ),
         linear-gradient(180deg, #f8f4ed 0%, #eef6f7 55%, #f7f4ef 100%);
       color: var(--text);
     }
@@ -106,12 +118,12 @@
       display: inline-flex;
       padding: 9px 15px;
       border-radius: 999px;
-      background: rgba(255,255,255,0.72);
+      background: rgba(255, 255, 255, 0.72);
       border: 1px solid var(--border);
       color: var(--orange);
       font-weight: 800;
       margin-bottom: 22px;
-      box-shadow: 0 12px 35px rgba(0,0,0,0.06);
+      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.06);
     }
 
     h1 {
@@ -152,15 +164,15 @@
       border-radius: 999px;
       padding: 15px 22px;
       font-weight: 850;
-      background: rgba(255,255,255,0.78);
+      background: rgba(255, 255, 255, 0.78);
       border: 1px solid var(--border);
-      box-shadow: 0 12px 35px rgba(0,0,0,0.08);
+      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
       transition: transform 180ms ease, box-shadow 180ms ease;
     }
 
     .button:hover {
       transform: translateY(-2px);
-      box-shadow: 0 18px 44px rgba(0,0,0,0.12);
+      box-shadow: 0 18px 44px rgba(0, 0, 0, 0.12);
     }
 
     .button.primary {
@@ -181,7 +193,11 @@
       width: 420px;
       height: 420px;
       border-radius: 999px;
-      background: radial-gradient(circle, rgba(245,154,47,0.18), transparent 70%);
+      background: radial-gradient(
+        circle,
+        rgba(245, 154, 47, 0.18),
+        transparent 70%
+      );
       filter: blur(8px);
       top: 10%;
       left: 50%;
@@ -243,7 +259,7 @@
       border: 1px solid var(--border);
       padding: 30px;
       min-height: 250px;
-      box-shadow: 0 18px 55px rgba(0,0,0,0.08);
+      box-shadow: 0 18px 55px rgba(0, 0, 0, 0.08);
     }
 
     .icon {
@@ -253,7 +269,7 @@
       display: grid;
       place-items: center;
       font-size: 1.45rem;
-      background: rgba(245,154,47,0.16);
+      background: rgba(245, 154, 47, 0.16);
       margin-bottom: 28px;
     }
 
@@ -285,9 +301,9 @@
       counter-increment: steps;
       border-radius: var(--radius);
       padding: 28px;
-      background: rgba(255,255,255,0.78);
+      background: rgba(255, 255, 255, 0.78);
       border: 1px solid var(--border);
-      box-shadow: 0 18px 55px rgba(0,0,0,0.08);
+      box-shadow: 0 18px 55px rgba(0, 0, 0, 0.08);
     }
 
     .step::before {
@@ -308,7 +324,7 @@
 
     .shot {
       border-radius: 42px;
-      background: rgba(255,255,255,0.78);
+      background: rgba(255, 255, 255, 0.78);
       border: 1px solid var(--border);
       padding: 14px;
       box-shadow: var(--shadow);
@@ -373,9 +389,9 @@
     .legal-card {
       border-radius: var(--radius);
       padding: 32px;
-      background: rgba(255,255,255,0.78);
+      background: rgba(255, 255, 255, 0.78);
       border: 1px solid var(--border);
-      box-shadow: 0 18px 55px rgba(0,0,0,0.08);
+      box-shadow: 0 18px 55px rgba(0, 0, 0, 0.08);
     }
 
     .legal-card.full {
@@ -391,7 +407,7 @@
     .legal-item {
       padding: 20px;
       border-radius: 24px;
-      background: rgba(255,255,255,0.68);
+      background: rgba(255, 255, 255, 0.68);
       border: 1px solid var(--border);
     }
 
@@ -405,6 +421,37 @@
       line-height: 1.5;
     }
 
+    .support-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 18px;
+      align-items: stretch;
+    }
+
+    .support-card {
+      border-radius: var(--radius);
+      padding: 32px;
+      background: rgba(255, 255, 255, 0.78);
+      border: 1px solid var(--border);
+      box-shadow: 0 18px 55px rgba(0, 0, 0, 0.08);
+    }
+
+    .support-card h3 {
+      margin: 0 0 12px;
+      letter-spacing: -0.045em;
+      font-size: 1.45rem;
+    }
+
+    .support-card p {
+      color: var(--muted);
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    .support-contact {
+      margin-top: 22px;
+    }
+
     footer {
       max-width: 1120px;
       margin: 0 auto;
@@ -413,7 +460,7 @@
       display: flex;
       justify-content: space-between;
       gap: 20px;
-      border-top: 1px solid rgba(0,0,0,0.08);
+      border-top: 1px solid rgba(0, 0, 0, 0.08);
     }
 
     .footer-brand {
@@ -449,7 +496,8 @@
       .cards,
       .steps,
       .screenshots,
-      .legal {
+      .legal,
+      .support-grid {
         grid-template-columns: 1fr;
       }
 
@@ -469,10 +517,12 @@
   <header>
     <nav class="nav">
       <a class="logo" href="#">me°drop</a>
+
       <div class="nav-links">
         <a href="#entdecken">Entdecken</a>
         <a href="#funktion">So funktioniert’s</a>
         <a href="#screenshots">Screenshots</a>
+        <a href="#support">Support</a>
         <a href="/datenschutz/">Datenschutz</a>
         <a href="#impressum">Impressum</a>
       </div>
@@ -482,14 +532,18 @@
   <main>
     <section class="hero">
       <div>
-        <div class="eyebrow">Orte. Freunde. Erinnerungen.</div>
+        <div class="eyebrow">Spontan. Gemeinsam. Unterwegs.</div>
+
         <h1>me°drop</h1>
+
         <div class="headline">Drop moments, not messages.</div>
+
         <p class="lead">
-          me°drop verbindet Orte mit Menschen. Teile besondere Plätze,
-          plane kleine Überraschungen und erschaffe Erinnerungen, die nicht einfach
-          in einem Chat verschwinden.
+          Spontane Treffen ohne endlose Gruppenchats. Mit me°drop teilst du
+          einen Treffpunkt mit Freunden oder Circles und machst aus einer
+          spontanen Idee in wenigen Sekunden ein gemeinsames Treffen.
         </p>
+
         <div class="actions">
           <a class="button primary" href="#entdecken">Entdecken</a>
           <a class="button" href="#funktion">So funktioniert’s</a>
@@ -498,119 +552,206 @@
 
       <div class="phone-stage">
         <div class="phone-card">
-          <img src="assets/01_map_drop.jpeg" alt="me°drop Kartenansicht mit aktivem Drop" />
+          <img
+            src="assets/01_map_drop.jpeg"
+            alt="me°drop Kartenansicht mit aktivem Drop"
+          />
         </div>
       </div>
     </section>
 
     <section id="entdecken">
-      <h2 class="section-title">Entdecken statt nur schreiben.</h2>
+      <h2 class="section-title">Weniger schreiben. Mehr erleben.</h2>
+
       <p class="section-text">
-        Mit me°drop werden Orte zu kleinen Geschichten. Du entscheidest,
-        wer etwas sehen darf, wann es sichtbar wird und wo daraus ein Moment entsteht.
+        Mit me°drop entstehen spontane Treffen ohne komplizierte Planung.
+        Erstelle einen Drop, wähle Freunde oder Circles aus und teile direkt,
+        wo und wie lange du anzutreffen bist.
       </p>
 
       <div class="cards">
         <article class="card">
           <div class="icon">📍</div>
-          <h3>Orte teilen</h3>
-          <p>Markiere besondere Plätze und teile sie gezielt mit Menschen, für die dieser Ort eine Bedeutung haben soll.</p>
+          <h3>Treffpunkte teilen</h3>
+          <p>
+            Erstelle einen Drop mit Ort, Zeitraum und einer kurzen Nachricht
+            und teile ihn genau mit den Personen, die du erreichen möchtest.
+          </p>
         </article>
 
         <article class="card">
-          <div class="icon">✨</div>
-          <h3>Überraschungen planen</h3>
-          <p>Erstelle Drops, die erst am richtigen Ort oder zum passenden Zeitpunkt ihren Sinn entfalten.</p>
+          <div class="icon">👥</div>
+          <h3>Freunde & Circles</h3>
+          <p>
+            Entscheide selbst, ob einzelne Freunde oder ein ganzer Circle
+            deinen Drop sehen kann.
+          </p>
         </article>
 
         <article class="card">
-          <div class="icon">🫶</div>
-          <h3>Erinnerungen erschaffen</h3>
-          <p>Aus einer Nachricht wird ein Erlebnis. Aus einem Ort wird eine Geschichte, die man gemeinsam behält.</p>
+          <div class="icon">✓</div>
+          <h3>Check-ins</h3>
+          <p>
+            Freunde können per Check-in zeigen, dass sie bei deinem Drop
+            angekommen sind.
+          </p>
         </article>
       </div>
     </section>
 
     <section id="funktion">
       <h2 class="section-title">So funktioniert’s.</h2>
+
       <p class="section-text">
-        me°drop bleibt bewusst einfach: Moment wählen, Menschen auswählen,
-        Drop platzieren und später gemeinsam entdecken.
+        me°drop bleibt bewusst einfach: Treffpunkt setzen, Freunde auswählen,
+        Zeitraum festlegen und spontan zusammenkommen.
       </p>
 
       <div class="steps">
         <article class="step">
           <h3>Drop erstellen</h3>
-          <p>Halte eine Nachricht, Idee oder Erinnerung fest und verbinde sie mit einem Ort.</p>
+          <p>
+            Wähle einen Treffpunkt und ergänze eine kurze Nachricht.
+          </p>
         </article>
 
         <article class="step">
           <h3>Freunde auswählen</h3>
-          <p>Teile deinen Drop nur mit den Menschen, für die er bestimmt ist.</p>
+          <p>
+            Teile deinen Drop mit einzelnen Freunden oder deinen Circles.
+          </p>
         </article>
 
         <article class="step">
-          <h3>Zeitpunkt festlegen</h3>
-          <p>Bestimme, wann der Drop sichtbar wird und wann der Moment entstehen soll.</p>
+          <h3>Zeitraum festlegen</h3>
+          <p>
+            Bestimme, wie lange dein Drop aktiv und sichtbar bleibt.
+          </p>
         </article>
 
         <article class="step">
-          <h3>Check-in</h3>
-          <p>Am richtigen Ort wird aus dem Drop ein echtes Erlebnis.</p>
+          <h3>Zusammenkommen</h3>
+          <p>
+            Freunde sehen deinen Drop und können direkt vorbeikommen und
+            einchecken.
+          </p>
         </article>
       </div>
     </section>
 
     <section id="screenshots">
       <h2 class="section-title">Ein Blick in me°drop.</h2>
+
       <p class="section-text">
-        Die App nutzt vertraute iOS-Muster, weiche Cards und eine klare Kartenansicht.
-        Alles bleibt nah am Ort, am Moment und an den Menschen.
+        Eine klare Kartenansicht, vertraute Bedienung und alle wichtigen
+        Informationen auf einen Blick.
       </p>
 
       <div class="screenshots">
         <article class="shot">
-          <img src="assets/01_map_drop.jpeg" alt="Kartenansicht mit aktivem Drop" />
+          <img
+            src="assets/01_map_drop.jpeg"
+            alt="Kartenansicht mit aktivem Drop"
+          />
+
           <div class="shot-copy">
             <h3>Karte</h3>
-            <p>Sieh, wo Drops auf dich warten und welche Orte eine Geschichte tragen.</p>
+            <p>
+              Sieh aktive Drops deiner Freunde direkt auf der Karte.
+            </p>
           </div>
         </article>
 
         <article class="shot">
-          <img src="assets/02_circle_select.png" alt="Circle-Auswahl in me°drop" />
+          <img
+            src="assets/02_circle_select.png"
+            alt="Circle-Auswahl in me°drop"
+          />
+
           <div class="shot-copy">
             <h3>Circles</h3>
-            <p>Wähle gezielt aus, mit wem du einen Moment teilen möchtest.</p>
+            <p>
+              Wähle gezielt aus, mit wem du deinen Drop teilen möchtest.
+            </p>
           </div>
         </article>
 
         <article class="shot">
-          <img src="assets/03_create_drop.png" alt="Drop erstellen in me°drop" />
+          <img
+            src="assets/03_create_drop.png"
+            alt="Drop erstellen in me°drop"
+          />
+
           <div class="shot-copy">
             <h3>Drop erstellen</h3>
-            <p>Nachricht, Zeitraum und Ort werden zu einem gemeinsamen Erlebnis.</p>
+            <p>
+              Ort, Zeitraum und Nachricht – mehr braucht es nicht.
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="support">
+      <h2 class="section-title">Support.</h2>
+
+      <p class="section-text">
+        Fragen zu me°drop oder etwas funktioniert nicht wie erwartet?
+        Schreib uns – wir helfen dir gerne weiter.
+      </p>
+
+      <div class="support-grid">
+        <article class="support-card">
+          <h3>Direkter Kontakt</h3>
+
+          <p>
+            Bei technischen Problemen, Fragen zu deinem Konto oder allgemeinen
+            Fragen zu me°drop erreichst du uns per E-Mail.
+          </p>
+
+          <div class="support-contact">
+            <a class="button primary" href="mailto:hello@medrop.ch">
+              hello@medrop.ch
+            </a>
+          </div>
+        </article>
+
+        <article class="support-card">
+          <h3>Datenschutz & Konto</h3>
+
+          <p>
+            Informationen zur Verarbeitung deiner Daten sowie zu deinen
+            Datenschutzrechten findest du in unserer Datenschutzerklärung.
+            Dein me°drop-Konto kannst du direkt innerhalb der App löschen.
+          </p>
+
+          <div class="support-contact">
+            <a class="button" href="/datenschutz/">
+              Datenschutz öffnen
+            </a>
           </div>
         </article>
       </div>
     </section>
 
     <section id="datenschutz">
-  <div class="legal">
-    <article class="legal-card full">
-      <h2>Datenschutz</h2>
-      <p>
-        Transparente Informationen zur Verarbeitung personenbezogener Daten,
-        zu Standortfunktionen, Firebase, Google Maps, Werbung und deinen
-        Rechten findest du in der vollständigen Datenschutzerklärung.
-      </p>
+      <div class="legal">
+        <article class="legal-card full">
+          <h2>Datenschutz</h2>
 
-      <div class="actions">
-        <a class="button" href="/datenschutz/">
-          Datenschutzerklärung öffnen
-        </a>
-      </div>
-    </article>
+          <p>
+            Transparente Informationen zur Verarbeitung personenbezogener
+            Daten, zu Standortfunktionen, Firebase, Google Maps, Werbung und
+            deinen Rechten findest du in der vollständigen
+            Datenschutzerklärung.
+          </p>
+
+          <div class="actions">
+            <a class="button" href="/datenschutz/">
+              Datenschutzerklärung öffnen
+            </a>
+          </div>
+        </article>
 
         <article id="impressum" class="legal-card full">
           <h2>Impressum</h2>
@@ -622,6 +763,13 @@
             </div>
 
             <div class="legal-item">
+              <strong>Kontakt</strong>
+              <span>
+                <a href="mailto:hello@medrop.ch">hello@medrop.ch</a>
+              </span>
+            </div>
+
+            <div class="legal-item">
               <strong>Verantwortlich für den Inhalt</strong>
               <span>Pascal Wagner</span>
             </div>
@@ -629,18 +777,20 @@
             <div class="legal-item">
               <strong>Haftungsausschluss</strong>
               <span>
-                Alle Inhalte dieser Website wurden mit grösster Sorgfalt erstellt.
-                Für die Richtigkeit, Vollständigkeit und Aktualität der bereitgestellten Informationen
-                wird jedoch keine Gewähr übernommen.
+                Alle Inhalte dieser Website wurden mit grösster Sorgfalt
+                erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität
+                der bereitgestellten Informationen wird jedoch keine Gewähr
+                übernommen.
               </span>
             </div>
 
             <div class="legal-item">
               <strong>Urheberrecht</strong>
               <span>
-                Sämtliche Inhalte dieser Website, insbesondere Texte, Bilder, Grafiken und Designs,
-                unterliegen dem Urheberrecht. Eine Verwendung ausserhalb der gesetzlichen Bestimmungen
-                bedarf der vorherigen Zustimmung.
+                Sämtliche Inhalte dieser Website, insbesondere Texte, Bilder,
+                Grafiken und Designs, unterliegen dem Urheberrecht. Eine
+                Verwendung ausserhalb der gesetzlichen Bestimmungen bedarf
+                der vorherigen Zustimmung.
               </span>
             </div>
           </div>
@@ -654,6 +804,7 @@
       <div class="footer-brand">© 2026 me°drop</div>
       <div>Made with ❤️ in Switzerland</div>
     </div>
+
     <div>Drop moments, not messages.</div>
   </footer>
 </body>
