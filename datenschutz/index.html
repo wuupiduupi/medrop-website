@@ -275,7 +275,7 @@
   </header>
 
   <main>
-    <div class="eyebrow">Stand: August 2026</div>
+    <div class="eyebrow">Stand: 29. Oktober 2026</div>
 
     <h1>Datenschutz</h1>
 
@@ -338,7 +338,6 @@
           <li>Meldungen über Nutzer oder Inhalte</li>
           <li>Benachrichtigungs- und App-Einstellungen</li>
           <li>Push-Token und technische Gerätekennungen</li>
-          <li>Kauf- und Abonnementstatus</li>
           <li>Werbe-, Nutzungs- und Diagnosedaten</li>
         </ul>
       </section>
@@ -378,7 +377,6 @@
           <li>Push-Benachrichtigungen zu versenden</li>
           <li>Missbrauch zu verhindern und Meldungen zu prüfen</li>
           <li>blockierte Kontakte auszublenden</li>
-          <li>Abonnements und Premiumfunktionen zu verwalten</li>
           <li>Werbung entsprechend der gewählten Einwilligung anzuzeigen</li>
           <li>Fehler zu erkennen und die App technisch zu betreiben</li>
         </ul>
@@ -414,18 +412,18 @@
       </section>
 
       <section>
-        <h2>7. Anmeldung mit Apple und Google</h2>
+        <h2>7. Anmeldung</h2>
 
         <p>
-          Je nach Plattform kann die Anmeldung über Apple oder Google
-          erfolgen. Dabei werden die für die Anmeldung erforderlichen
-          Informationen wie Nutzer-ID, Name und E-Mail-Adresse an me°drop
-          übermittelt.
+          Die aktuelle App bietet die Anmeldung mit E-Mail-Adresse und Passwort über
+          Firebase Authentication an. Die Anmeldeschaltflächen für Apple und Google
+          sind deaktiviert.
         </p>
 
         <p>
-          Der Umfang der übermittelten Daten richtet sich nach den
-          Einstellungen und Angaben beim jeweiligen Anbieter.
+          Bei Konten, die in einer früheren Version mit Apple oder Google angelegt
+          wurden, können die zugehörige Anbieterkennung sowie bereits übermittelte
+          Kontoangaben weiterhin gespeichert sein.
         </p>
       </section>
 
@@ -475,18 +473,18 @@
       </section>
 
       <section>
-        <h2>10. Käufe und Abonnements</h2>
+        <h2>10. Kostenlose Startversion</h2>
 
         <p>
-          Käufe und Abonnements werden über den jeweiligen App Store und
-          RevenueCat verwaltet. me°drop erhält dabei keine vollständigen
-          Zahlungs- oder Kreditkartendaten.
+          Die aktuelle Startversion von me°drop bietet keine In-App-Käufe oder
+          Abonnements an. Die RevenueCat-Integration ist deaktiviert. Durch diese
+          Integration werden in der aktuellen App keine Kauf- oder Abonnementdaten an
+          RevenueCat übermittelt.
         </p>
 
         <p>
-          Bearbeitet werden können insbesondere Kaufstatus,
-          Produktkennung, Transaktionsinformationen und eine technische
-          Kundenkennung.
+          Falls später kostenpflichtige Funktionen eingeführt werden, wird diese
+          Datenschutzerklärung vor deren Aktivierung entsprechend angepasst.
         </p>
       </section>
 
@@ -494,30 +492,65 @@
         <h2>11. Push-Benachrichtigungen</h2>
 
         <p>
-          Bei aktivierten Push-Benachrichtigungen wird ein technisches
-          Push-Token gespeichert. Dieses wird verwendet, um beispielsweise
-          über neue Drops oder Check-ins zu informieren.
+          Bei aktivierten Push-Benachrichtigungen wird ein technisches Push-Token
+          gespeichert. Dieses wird verwendet, um beispielsweise über neue Drops,
+          Check-ins und abgeschlossene Prüfungen zu informieren.
         </p>
 
         <p>
-          Push-Benachrichtigungen können in der App oder den
+          Nach einer Bildprüfung erhält die Person, die das Bild eingereicht hat, eine
+          Rückmeldung. Bei Meldungen über Profile oder Drops erhält nur die meldende
+          Person eine Rückmeldung zur Entscheidung. Ablehnungsgründe für Bilder stehen
+          in der privaten In-App-Meldung; der Push zeigt einen allgemeinen Hinweis.
+          Interne Moderationsnotizen werden nicht in diesen Push-Hinweisen
+          übermittelt.
+        </p>
+
+        <p>
+          Persönliche Rückmeldungen werden auch in der Benachrichtigungsliste der App
+          gespeichert. Push-Benachrichtigungen können in der App oder den
           Betriebssystemeinstellungen deaktiviert werden.
         </p>
       </section>
 
       <section>
-        <h2>12. Meldungen, Blockierungen und Sicherheit</h2>
+        <h2>12. Meldungen, Bildprüfung, Textfilter und Blockierungen</h2>
 
         <p>
-          Nutzer können andere Nutzer oder Drops melden und Kontakte
-          blockieren. Dabei werden die zur Prüfung und technischen
-          Umsetzung notwendigen Angaben gespeichert.
+          Nutzer können andere Nutzer oder Drops melden und Kontakte blockieren. Zur
+          Prüfung speichern wir insbesondere die meldende Nutzer-ID, die gemeldete
+          Nutzer- oder Drop-ID, den Grund, die zu prüfenden Inhalte, den
+          Bearbeitungsstatus und Zeitpunkte. Autorisierte Moderatoren können die
+          Meldungen bearbeiten. Entscheidungen werden mit Kontoreferenz,
+          Moderatorreferenz, gegebenenfalls einer Begründung und Zeitpunkt
+          protokolliert.
         </p>
 
         <p>
-          Meldungen können insbesondere die meldende Nutzer-ID,
-          die gemeldete Nutzer- oder Drop-ID, den Grund, den Status
-          und den Erstellungszeitpunkt enthalten.
+          Neue Profilbilder werden in der aktuellen App vor der Veröffentlichung
+          manuell geprüft. Das eingereichte Bild wird verkleinert, von eingebetteten
+          Metadaten wie EXIF-Informationen bereinigt und in einer privaten Prüfablage
+          in Cloud Firestore gespeichert. Andere Nutzer können diese Prüfablage nicht
+          lesen. Bis zur Freigabe bleibt das bisherige Profilbild sichtbar.
+        </p>
+
+        <p>
+          Nach der Freigabe wird das Bild in Firebase Storage veröffentlicht. Bei
+          Ablehnung werden die Bilddaten aus der Prüfablage entfernt; die einreichende
+          Person sieht eine Begründung. Es wird kein zusätzlicher externer
+          Bildprüfdienst eingesetzt.
+        </p>
+
+        <p>
+          Profiltexte, Circle-Namen und Drop-Nachrichten werden vor dem Speichern
+          serverseitig auf ausgewählte unzulässige Begriffe und Formulierungen
+          geprüft. Dieser begrenzte Filter ersetzt die Bearbeitung von Meldungen
+          nicht. Abgewiesene Texte werden durch den Filter nicht als App-Inhalt
+          gespeichert.
+        </p>
+
+        <p>
+          Blockierungen werden gespeichert, damit die App unerwünschten Kontakt verhindern kann.
         </p>
       </section>
 
@@ -538,6 +571,12 @@
           <li>
             Abgelaufene Drops werden automatisiert oder im Rahmen der
             vorgesehenen App-Funktionen gelöscht.
+          </li>
+          <li>
+          Unbearbeitete Bildanfragen werden nach 30 Tagen bei der täglichen
+          Bereinigung entfernt. Bereits begonnene Veröffentlichungen bleiben bis zum
+          Abschluss erhalten. Moderationsentscheidungen werden zur Nachvollziehbarkeit
+          und Missbrauchsabwehr protokolliert.
           </li>
           <li>
             Ungültige Push-Token können automatisiert entfernt werden.
@@ -561,8 +600,8 @@
 
         <p>
           Personendaten werden nur an Dienstleister übermittelt, soweit
-          dies für Betrieb, Sicherheit, Anmeldung, Karten, Werbung,
-          Push-Benachrichtigungen oder Abonnements erforderlich ist.
+          dies für Betrieb, Sicherheit, Anmeldung, Karten, Werbung und
+          Push-Benachrichtigungen erforderlich ist.
         </p>
 
         <p>Hierzu gehören insbesondere:</p>
@@ -571,7 +610,6 @@
           <li>Google und Firebase</li>
           <li>Google Maps und Google AdMob</li>
           <li>Apple</li>
-          <li>RevenueCat</li>
           <li>App-Store- und Plattformbetreiber</li>
         </ul>
 
