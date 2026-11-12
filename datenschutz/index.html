@@ -275,7 +275,7 @@
   </header>
 
   <main>
-    <div class="eyebrow">Stand: 29. Oktober 2026</div>
+    <div class="eyebrow">Stand: 12. November 2026</div>
 
     <h1>Datenschutz</h1>
 
@@ -339,6 +339,8 @@
           <li>Benachrichtigungs- und App-Einstellungen</li>
           <li>Push-Token und technische Gerätekennungen</li>
           <li>Werbe-, Nutzungs- und Diagnosedaten</li>
+          <li>Kauf-, Transaktions- und Abonnementstatus bei Nutzung von Premium</li>
+          <li>freiwillig eingereichte Bewertungen und Kommentare im Feedbackformular</li>
         </ul>
       </section>
 
@@ -379,6 +381,8 @@
           <li>blockierte Kontakte auszublenden</li>
           <li>Werbung entsprechend der gewählten Einwilligung anzuzeigen</li>
           <li>Fehler zu erkennen und die App technisch zu betreiben</li>
+          <li>Premium-Berechtigungen zu prüfen und Abonnements zu verwalten</li>
+          <li>freiwilliges Feedback zur Verbesserung der App auszuwerten</li>
         </ul>
       </section>
 
@@ -415,15 +419,22 @@
         <h2>7. Anmeldung</h2>
 
         <p>
-          Die aktuelle App bietet die Anmeldung mit E-Mail-Adresse und Passwort über
-          Firebase Authentication an. Die Anmeldeschaltflächen für Apple und Google
-          sind deaktiviert.
+          Die App bietet die Anmeldung mit E-Mail-Adresse und Passwort über
+          Firebase Authentication an. Ab Version 1.1.0 steht zusätzlich die Anmeldung
+          mit Google sowie auf dem iPhone mit Apple zur Verfügung.
         </p>
 
         <p>
-          Bei Konten, die in einer früheren Version mit Apple oder Google angelegt
-          wurden, können die zugehörige Anbieterkennung sowie bereits übermittelte
-          Kontoangaben weiterhin gespeichert sein.
+          Der gewählte Anbieter bestätigt die Identität gegenüber Firebase Authentication.
+          Dabei erhalten wir eine Anbieterkennung, die E-Mail-Adresse und – sofern
+          freigegeben – den Namen. Bei Apple kann eine private Weiterleitungsadresse
+          anstelle der eigenen E-Mail-Adresse verwendet werden.
+        </p>
+        <p>
+          Den öffentlichen Namen in me°drop wählen Nutzer selbst. Profilbilder des
+          Anbieters werden nicht automatisch als öffentliches Profilbild übernommen.
+          Die Anmeldung gewährt uns keinen Zugriff auf Kontakte, E-Mails oder Dateien
+          beim Anbieter.
         </p>
       </section>
 
@@ -473,18 +484,64 @@
       </section>
 
       <section>
-        <h2>10. Kostenlose Startversion</h2>
+        <h2>10. Premium-Abonnements und RevenueCat</h2>
 
         <p>
-          Die aktuelle Startversion von me°drop bietet keine In-App-Käufe oder
-          Abonnements an. Die RevenueCat-Integration ist deaktiviert. Durch diese
-          Integration werden in der aktuellen App keine Kauf- oder Abonnementdaten an
-          RevenueCat übermittelt.
+          Die kostenlose Basisversion bleibt verfügbar. Ab Version 1.1.0 werden auf
+          dem iPhone zusätzlich die optionalen Monatsabonnements Premium und Premium
+          Plus angeboten. Für die Prüfung und Verwaltung der Berechtigungen verwenden
+          wir RevenueCat. Dabei werden die interne me°drop-Konto-ID, Produkt- und
+          Transaktionskennungen sowie Kaufstatus, Laufzeit, Verlängerung, Kündigung
+          und gegebenenfalls Rückerstattung verarbeitet.
         </p>
 
         <p>
-          Falls später kostenpflichtige Funktionen eingeführt werden, wird diese
-          Datenschutzerklärung vor deren Aktivierung entsprechend angepasst.
+          Die Zahlung und Abonnementverwaltung erfolgen über Apple. me°drop erhält
+          keine Kreditkartennummern. Der bestätigte Abonnementstatus wird in Firebase
+          gespeichert, um Werbung auszublenden und die jeweiligen Drop- und
+          Circle-Limits anzuwenden. Eine Kontolöschung in me°drop ersetzt nicht die
+          Kündigung eines Abonnements über die Apple-Abonnementverwaltung.
+        </p>
+        <p>
+          Weitere Informationen zur Verarbeitung durch RevenueCat:
+          <a href="https://www.revenuecat.com/privacy/" target="_blank" rel="noopener noreferrer">RevenueCat-Datenschutzerklärung</a>.
+        </p>
+      </section>
+
+      <section>
+        <h2>10a. Freiwilliges Feedback</h2>
+        <p>
+          Ab Version 1.1.0 kann ein Google-Forms-Fragebogen direkt innerhalb der App
+          geöffnet werden. Dabei stellt das Gerät eine Verbindung zu Google her;
+          technische Zugriffsdaten wie IP-Adresse und Browserinformationen können
+          durch den Formularanbieter verarbeitet werden. Wir hängen keine
+          me°drop-Konto-ID, Profilangaben oder Standortdaten an das Formular an.
+        </p>
+        <p>
+          Freiwillig abgesendete Bewertungen und Kommentare werden in Google Forms
+          gespeichert und vom Betreiber zur Verbesserung von me°drop ausgewertet.
+          Ergänzend gelten die im Fragebogen verlinkten Datenschutzhinweise von Google.
+        </p>
+      </section>
+
+      <section>
+        <h2>10b. Einladungslinks</h2>
+        <p>
+          Ab Version 1.1.0 können Nutzer einen Einladungslink für ausgewählte eigene
+          Circles erstellen. Dazu speichern wir einen zufälligen Code, den Ersteller,
+          die ausgewählten Circles, den Ablaufzeitpunkt und gegebenenfalls Referenzen
+          auf bewusst mitgeteilte laufende Drops. Erst nach Anmeldung und ausdrücklicher
+          Annahme werden Freundschaft und Circle-Zuordnung hergestellt und ausgewählte,
+          noch gültige Drops für den Empfänger freigegeben.
+        </p>
+        <p>
+          Einladungen sind 48 Stunden gültig und werden danach automatisch zur
+          Löschung vorgesehen. Die Löschung kann technisch verzögert erfolgen;
+          eine Annahme nach Ablauf ist ausgeschlossen. Bereits entstandene
+          Freundschaften und Circle-Zuordnungen bleiben bestehen. Öffentliche
+          Einladungsseiten auf Firebase Hosting zeigen keine privaten Profil-,
+          Circle- oder Standortdaten. Beim Seitenaufruf verarbeitet der
+          Hostinganbieter technische Zugriffsdaten.
         </p>
       </section>
 
@@ -600,8 +657,8 @@
 
         <p>
           Personendaten werden nur an Dienstleister übermittelt, soweit
-          dies für Betrieb, Sicherheit, Anmeldung, Karten, Werbung und
-          Push-Benachrichtigungen erforderlich ist.
+          dies für Betrieb, Sicherheit, Anmeldung, Karten, Werbung,
+          Push-Benachrichtigungen, Abonnements und freiwilliges Feedback erforderlich ist.
         </p>
 
         <p>Hierzu gehören insbesondere:</p>
@@ -610,6 +667,8 @@
           <li>Google und Firebase</li>
           <li>Google Maps und Google AdMob</li>
           <li>Apple</li>
+          <li>RevenueCat zur Prüfung und Verwaltung von Abonnements</li>
+          <li>Google Forms für freiwilliges Feedback</li>
           <li>App-Store- und Plattformbetreiber</li>
         </ul>
 
